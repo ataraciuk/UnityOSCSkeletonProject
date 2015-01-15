@@ -31,6 +31,13 @@ public class OSCListener : MonoBehaviour {
 		 * Cast to transform to desired type:
 		 * (int)args[0]
 		 * (float)args[1]
+		 * 
+		 * Typical way to use:
+		 * 
+		 * if (address == "/gesture/mouth/height") {
+		 * 	do something, probably with args.
+		 * }
+		 * 
 		 * Use BroadcastMessage to send message to descendants
 		*/
 		Debug.Log("address: "+ address + "     |     args: "+string.Join(",",args.ToArray().Select(x => x.ToString()).ToArray()));
